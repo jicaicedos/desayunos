@@ -29,7 +29,7 @@ color_texto_contactos = #453205
 
 color_fondo_redes_sociales = #FDEFC6
 
-color_article_desayunos = #F09139
+color_article_desayunos = #FBF0C6
 
 color_fondo_verde_mantel = #03C948
 
@@ -44,13 +44,16 @@ article a
 article
 	display -webkit-box
 	margin 1rem
-	background -moz-linear-gradient(left top, left bottom,from(color_fondo_contactos), to(amarillo_claro))	
-	background -webkit-gradient(linear,left top, left bottom,from(color_fondo_contactos), to(amarillo_claro))
+	background color_article_desayunos
+	// background -moz-linear-gradient(left top, left bottom,from(naranjado_medio), to(white))	
+	// background -webkit-gradient(linear,left top, left bottom,from(naranjado_medio), to(white))
 	box-shadow 10px 10px 10px gray
 	border-radius 0 15px 15px 0
+	border-left 1px solid gray
+	border-top 1px solid gray
 	& p
-		color white
-		width 100px
+		color color_texto_contactos
+		width 200px
 	
 figure
 	margin 0
@@ -189,7 +192,6 @@ ul
 
 
 /*
-*	
 *   ===============================================================
 *			RESOLUCION PARA CELULARES (PEQUEÑA) 
 *		480 × 320 Phone (landscape) => Horizontal
@@ -222,32 +224,46 @@ ul
 
 /* 
 *   ===============================================================
-*		RESOLUCION PARA TABLET (MEDIANA) => Para IPAD 1024 X 768
+*				RESOLUCION PARA TABLET
+*			800 × 480 Small Tablet (landscape)
 *   ===============================================================
 */
  @media screen and (min-width 800px)
 	section
 		display -webkit-inline-box		
 	article
-		background -moz-linear-gradient(left top, left bottom,from(amarillo_claro), to(amarillo_claro))	
-		background -webkit-gradient(linear,left top, left bottom,from(amarillo_claro), to(amarillo_claro))
 		border-radius 15px
 		display block
 		text-align center
+		border-top 1px solid gray
+		border-left 1px solid gray
 		& p 
-			color white
+			color color_texto_contactos
 			margin 0
 			font-size 1rem
-			padding-left 2.5rem
+			padding-left 0
+	.menu ul li ul li:nth-child(2) img // Escondemos el elemento imagen del menu
+		display none	
+	.menu ul li ul li:nth-child(2)  // Escondemos el elemento vacío del menu
+		display none
+	.menu ul li:nth-child(1) img
+		display none
+	.menu ul li ul li
+		background fondo_item_menu
+		border-radius 35px
+		padding 1rem
+		display -webkit-inline-box
+	.menu
+		position relative
+	.menu ul ul
+		display inline-block
 	.redes_sociales_contacto ul li
 		display -webkit-inline-box	
 	.desayunos_tipo--img
 		margin auto 1rem
 		padding 0rem		
 	.layoutDesayunos
-		text-align center		
-	.menu ul li ul li:nth-child(2)
-		display none
+		text-align center
 	.desayunos_tipo--img
 		padding-left 1rem
 		padding-right 1rem
@@ -257,6 +273,7 @@ ul
 		background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
 		background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
 		padding 0.4rem
+		
 			
 		
 /* 
