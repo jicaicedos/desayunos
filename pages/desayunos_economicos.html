@@ -33,98 +33,93 @@
   <!-- <link rel="shortcut icon" href="images/jicaicedos.png" /> -->
 </head>
 <body>
-<header>
-  <div class="encabezado__image">
-    <figure class="encabezado__image__foto">
-      <img class="encabezado__image__foto--img" src="../images/desayunos.jpg" alt="">
-    </figure>
-  </div>
-  <div class="panel_menu">
-    <nav class="menu">
-      <ul>
-        <li>  <img src="../images/iconos/0190-menu.png" alt="">    
-          <ul>
-            <li></li>
-            <li><img class="panel_menu--image" src="../images/logo.png" alt="" /></li>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#">Desayunos económicos</a></li>
-            <li><a href="#">Desayunos especiales</a></li>
-            <li><a href="#">Desayunos saludables</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    <h1> Desayunos económicos </h1>
-  </div>
-</header>
-
-<main class="de_layoutDesayunos">
-  <section>
-    <article class="de_desayuno_eco">
-    	<div class="de_info_desayuno">
-		<div class="de_ver_desayuno">
-	      <a href="">
-	        <p>Desayuno económico #1</p>
-	      </a>
-	      <figure class="de_desayunos_tipo--img">
-	        <img class="de_desayunos_tipo_img" src="../images/economicos/Desayuno economico (1).jpg" alt="Desayuno economico">
-	      </figure>    
-		</div>
-		<div class="de_contenido">
-	      <h2>Contenido</h2>
-	      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum provident doloremque repudiandae ipsa nam distinctio quibusdam reprehenderit optio dicta iure, ea voluptatem dolorum, commodi aperiam dolorem libero delectus consequatur tempore.</p>
-      	</div>  
-	      <div class="de_adicionar">
-	      	<h2>Adicionar</h2>
-	      	<ul>
-	      		<li>Globos</li>
-	      		<li>Flores</li>
-	      		<li>Chocolates</li>
-	      		<li>Vino nacional</li>
-	      		<li>Vino importado</li>
-	      	</ul>
-	      </div>
-      </div>
-      <div class="de_precio_desayuno">
-      	<p>
-      		Valor individual <input id="vlr_individual" type="text" placeholder="Valor individual desayuno">
-      	</p>
-      	<p>
-      		Cantidad <input id="cantidad" type="text" placeholder="Cantidad a ordenar">
-      	</p>
-      	<p>
-      		Total <input id="total" type="text" placeholder="Total a pagar">
-      	</p>      	
-      </div>
-      <div class="de_botones_orden">
-      	<input type="submit" value="Limpiar">
-      	<input type="submit" value="Adicionar">
-      	<input type="submit" value="Terminar">
-      </div>
-    </article>
-  </section>
-</main>
-
-<footer>
-  <div class="layout_footer">
-    <div class="redes_sociales_contacto">
-      <ul>
-        <li><a href=""><img src="../images/iconos/0399-facebook3.png" alt=""></a>  Desayunos Anita</li>
-        <li><a href=""><img src="../images/iconos/0404-twitter3.png" alt=""></a>  @desayunosanita</li>
-        <li><a href=""><img src="../images/iconos/0395-google-plus3.png" alt=""></a>  Desayunos Anita</li>
-      </ul>
+  <header>
+    <div class="encabezado__image">
+      <figure class="encabezado__image__foto">
+        <img class="encabezado__image__foto--img" src="../images/desayunos.jpg" alt="">
+      </figure>
     </div>
-    <div class="contacto">
-      <p>Ana Maria Valbuena</p>
-      <p>Dirección: Carrera 41D # 32 - 75 </p>
-      <p>B. Praderas de Santa Rita</p>
-      <p>Celular:  399 888 7777</p>
+    <div class="panel_menu">
+      <nav class="menu">
+        <ul>
+          <li>  <img src="../images/iconos/0190-menu.png" alt="">    
+            <ul>
+              <li></li>
+              <li><img class="panel_menu--image" src="../images/logo.png" alt="" /></li>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="#">Desayunos económicos</a></li>
+              <li><a href="#">Desayunos especiales</a></li>
+              <li><a href="#">Desayunos saludables</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <h1> Desayunos económicos </h1>
     </div>
-  </div>
-  <div class="linea_divisora"></div>
-  <p> Javier Caicedo - Sitios Web a su medida </p>
-</footer>
+  </header>
 
-</body>
+  <main class="de_layoutDesayunos">
+    <section>
+      <article class="de_desayuno_eco">
+      	<div class="de_info_desayuno">
+      		<div class="de_ver_desayuno">
+    	      <a href=""><p>Desayuno económico #1</p></a>
+    	      <figure class="de_desayunos_tipo--img">
+    	        <img class="de_desayunos_tipo_img" src="../images/economicos/Desayuno economico (1).jpg" alt="Desayuno economico" />
+    	      </figure>
+            <p><span id="precio_individual">20000</span></p>   
+      		</div>
+      		<div class="de_contenido">
+            <h2>Contenido</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum provident doloremque epudiandae ipsa nam distinctio quibusdam reprehenderit optio dicta iure, ea voluptatem dolorum, commodi aperiam dolorem libero delectus consequatur tempore.</p>
+          </div>  
+  	      <div class="de_adicionar">
+  	      	<h2>Adicionar</h2>
+            <form class="de_pedidos" action="de_pedido">           
+              <label><input type="checkbox" value="Globos" /></label><p>Globos</p><span id="prc_globos">5000</span><br>
+              <label><input type="checkbox" value="Flores" /></label><p>Flores</p><span id="prc_flores">10000</span><br>
+              <label><input type="checkbox" value="Chocolates" /></label><p>Chocolates</p><span id="prc_chocolates">8000</span><br>
+              <label><input type="checkbox" value="Vino nacional" /></label><p>Vino nacional</p><span id="prc_vino_nal">20000</span><br>
+              <label><input type="checkbox" value="Vino importado" /></label><p>Vino importado</p><span id="prc_vino_imp">40000</span><br>
+            </form>
+  	      </div>
+        </div>
+        <div class="de_precio_desayuno">
+        	<div><p>Valor individual </p><input id="vlr_individual" disabled="false" type="text" placeholder="Valor individual" /></div>
+       		<div><p>Cantidad </p><label><input id="cantidad" type="number" min="1" max="10" placeholder="Cantidad a ordenar" value="1"/></label></div>
+       		<div><p>Total a pagar </p><label><input id="total" disabled="false" type="text" placeholder="Total a pagar" /></label></div>
+        </div>
+        <div class="de_botones_orden">
+        	<!-- <input id="btn_limpiar" type="submit" value="Limpiar" /> -->
+        	<input id="btn_calcular" type="submit" value="Calcular" />
+        	<!-- <input id="btn_terminar" type="submit" value="Terminar" /> -->
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="layout_footer">
+      <div class="redes_sociales_contacto">
+        <ul>
+          <li><a href=""><img src="../images/iconos/0399-facebook3.png" alt=""></a>  Desayunos Anita</li>
+          <li><a href=""><img src="../images/iconos/0404-twitter3.png" alt=""></a>  @desayunosanita</li>
+          <li><a href=""><img src="../images/iconos/0395-google-plus3.png" alt=""></a>  Desayunos Anita</li>
+        </ul>
+      </div>
+      <div class="contacto">
+        <p>Ana Maria Valbuena</p>
+        <p>Dirección: Carrera 41D # 32 - 75 </p>
+        <p>B. Praderas de Santa Rita</p>
+        <p>Celular:  399 888 7777</p>
+      </div>
+    </div>
+    <div class="linea_divisora"></div>
+    <p> Javier Caicedo - Sitios Web a su medida </p>
+  </footer>
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="../js/jquery.number.min.js"></script>
+  <script src="../js/desayunos.js"></script>
+  </body>
 </html>
