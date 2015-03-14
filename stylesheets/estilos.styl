@@ -1,0 +1,231 @@
+@import ("estilos_deconomico.styl")
+
+// Colores 
+fondo_header = #F5AD65
+fondo_header2 = #ECC11A
+color_elementos_desayunos = #F3CC83
+elementos_desayunos = #F89714
+fondo_moviles = #FDE8B5
+fondo_item_menu = rgba(60, 60, 60, 0.75)
+
+color_fondo_contactos = #F59D3D
+color_texto_contactos = #453205
+
+color_fondo_redes_sociales = #FDEFC6
+
+color_article_desayunos = #F09139
+
+color_fondo_verde_mantel = #03C948
+
+article a
+	text-decoration none
+	font-weight bold
+	padding 0.4rem
+
+
+article
+	display -webkit-box
+	margin 1rem
+	background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
+	background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
+	box-shadow 10px 10px 10px gray
+	border-radius 0 15px 15px 0
+	& p
+		color white
+	
+figure
+	margin 0
+
+footer
+	text-align center
+	background #D82D23
+	& .contacto
+		& p
+			color color_texto_contactos
+			padding 0
+	& p
+		color white
+		margin 0
+		padding 1rem
+
+
+h1
+	margin 0
+	padding 0 0 0 1rem
+
+header
+	background fondo_header
+	background -moz-linear-gradient(left top, left bottom,from(red), to(fondo_header2))	
+	background -webkit-gradient(linear,left top, left bottom,from(red), to(fondo_header2))
+
+	
+ul
+	list-style-type none
+	margin 0
+	padding 0
+	
+.panel_menu
+	display -webkit-inline-box
+		
+.desayunos_tipo_img
+	border-radius 40%
+	width 9rem
+	height 6rem
+
+.desayunos_tipo--img
+	margin 0
+	padding 0
+
+.encabezado__image__foto--img
+	width 100%
+	height 150px
+
+.linea_divisora
+	border 1px solid
+	
+
+.menu ul a
+	text-decoration none
+	color white
+	font-size 14px
+	font-weight bold
+	
+/*
+*  Probando menu en linea superior
+*/
+.menu ul li ul li:nth-child(1)
+	display none
+
+.menu ul li:nth-child(1) img
+	display none
+
+.menu ul li ul li
+	background fondo_item_menu
+	border-radius 35px
+	padding 1rem
+		
+.menu li
+	display inline-block
+	
+.panel_menu
+	text-align center
+	display block
+
+.redes_sociales_contacto
+	text-align center
+	background color_fondo_redes_sociales
+	background -moz-linear-gradient(left top, left bottom,from(white), to(color_fondo_redes_sociales))	
+	background -webkit-gradient(linear,left top, left bottom,from(white), to(color_fondo_redes_sociales))
+	
+.redes_sociales_contacto ul li
+	margin-right 20px
+	font-weight bold
+	padding 0.8rem
+
+.contacto
+	background color_fondo_contactos
+	background -moz-linear-gradient(left top, left bottom,from(color_fondo_redes_sociales), to(color_fondo_contactos))	
+	background -webkit-gradient(linear,left top, left bottom,from(color_fondo_redes_sociales), to(color_fondo_contactos))
+	padding 1rem
+	font-weight bold
+	text-align center
+	
+.redes_sociales_contacto ul li a img
+	width 32px
+	height 32px
+	vertical-align top
+
+
+/*
+*   ===============================================================
+*		RESOLUCION PARA CELULARES (PEQUEÑA) 
+*   ===============================================================
+*/
+@media screen and (max-width 480px)
+	.menu ul li ul li:nth-child(2)
+		padding-left 0
+	.menu ul li ul li:nth-child(2) img
+		display block
+		width 100%
+		height 100px
+	.menu ul li:nth-child(1) img
+		display block
+	.menu
+		position absolute
+	.menu ul li ul li
+		display block
+		border-radius 0		
+		text-align left
+		padding 0 0 0.4rem 1rem
+	// CSS para menu emergente
+	.menu ul ul
+		display none
+	.menu li:hover > ul
+		display block
+
+
+/* 
+*   ===============================================================
+*		RESOLUCION PARA TABLET (MEDIANA) => Para IPAD 1024 X 768
+*   ===============================================================
+*/
+ @media screen and (min-width 436px)
+	section
+		display -webkit-inline-box
+		
+	article
+		background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))	
+		background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))
+		border-radius 15px
+		display block
+		text-align center
+		& p 
+			color white
+
+	.redes_sociales_contacto ul li
+		display -webkit-inline-box
+
+	
+	.desayunos_tipo--img
+		margin auto 3rem
+		padding 1rem
+		
+	.layoutDesayunos
+		text-align center
+		
+	.menu ul li ul li:nth-child(2)
+		display none
+
+	nav
+		background color_article_desayunos
+		background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
+		background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
+		padding 0.4rem
+			
+		
+/* 
+*   =======================================
+*		RESOLUCION PARA PC (GRANDE)
+*   =======================================
+*/
+@media screen and (min-width 1000px)  
+	.redes_sociales_contacto
+		width 50%
+		text-align -webkit-right
+		background -moz-linear-gradient(left top, left bottom,from(color_fondo_contactos), to(white))
+		background -webkit-gradient(linear,left top, left bottom,from(color_fondo_contactos), to(white))	
+		& li
+			padding 0
+	.contacto
+		width 50%
+		text-align -webkit-left
+		background -moz-linear-gradient(left top, left bottom,from(color_fondo_contactos), to(white))
+		background -webkit-gradient(linear,left top, left bottom,from(color_fondo_contactos), to(white))	
+		& p
+			margin 0.8rem 0
+	.redes_sociales_contacto ul li
+		display -webkit-box		
+	.layout_footer
+		display flex
+
+		
