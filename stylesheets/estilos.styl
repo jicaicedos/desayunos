@@ -1,6 +1,22 @@
 @import ("estilos_deconomico.styl")
 
 // Colores 
+amarillo_claro = #F9BE01
+amarillo_medio = #F5D408
+azul_claro_marino = #66D9EF
+azul_claro = #ADCBE9
+azul_medio = #008DA0
+azul_oscuro = #133B93
+
+morado_claro = #9395CA
+morado_oscuro = #AF70AF
+fuscia = #C61C80
+
+naranjado_oscuro = #EC6D33
+naranjado_medio = #F57D43
+
+
+
 fondo_header = #F5AD65
 fondo_header2 = #ECC11A
 color_elementos_desayunos = #F3CC83
@@ -17,24 +33,23 @@ color_article_desayunos = #F09139
 
 color_fondo_verde_mantel = #03C948
 
+html
+	min-height 100%
+
 article a
 	text-decoration none
 	font-weight bold
 	padding 0.4rem
 
-
 article
-	background #F8DC87
 	display -webkit-box
-	margin 0.8rem
-	// background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
-	// background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
+	margin 1rem
+	background -moz-linear-gradient(left top, left bottom,from(color_fondo_contactos), to(amarillo_claro))	
+	background -webkit-gradient(linear,left top, left bottom,from(color_fondo_contactos), to(amarillo_claro))
 	box-shadow 10px 10px 10px gray
 	border-radius 0 15px 15px 0
-	border-top 1px solid gray
-	border-left 1px solid gray
 	& p
-		color color_texto_contactos
+		color white
 		width 100px
 	
 figure
@@ -42,7 +57,8 @@ figure
 
 footer
 	text-align center
-	background #D82D23
+	background azul_oscuro
+	min-height 100%
 	& .contacto
 		& p
 			color color_texto_contactos
@@ -51,11 +67,9 @@ footer
 		color white
 		margin 0
 		padding 1rem
-
-
 h1
 	margin 0
-	padding 0 0 0 1rem
+	padding 0 0 0 1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 header
 	background fondo_header
@@ -73,9 +87,9 @@ ul
 		
 .desayunos_tipo_img
 	border-radius 40%
-	width 9rem
+	width 8rem
 	height 6rem
-	padding-top 0.5rem
+	padding-top 0.4rem
 
 .desayunos_tipo--img
 	margin 0
@@ -88,6 +102,7 @@ ul
 .linea_divisora
 	border 1px solid
 	
+
 .menu ul a
 	text-decoration none
 	color white
@@ -142,10 +157,13 @@ ul
 
 /*
 *   ===============================================================
-*		RESOLUCION PARA CELULARES (PEQUEÑA) 
+*			RESOLUCION PARA CELULARES (PEQUEÑA) 
+*		320 × 480 Phone (portrait) => Vertical
 *   ===============================================================
 */
-@media screen and (max-width 480px)
+@media screen and (max-width 320px)
+	h1
+		font-size 1.5rem
 	.menu ul li ul li:nth-child(2)
 		padding-left 0
 	.menu ul li ul li:nth-child(2) img
@@ -168,38 +186,70 @@ ul
 		display block
 
 
+/*
+*	
+*   ===============================================================
+*			RESOLUCION PARA CELULARES (PEQUEÑA) 
+*		480 × 320 Phone (landscape) => Horizontal
+*   ===============================================================
+*/
+@media screen and (max-width 480px)
+	article p
+		padding-left 2rem
+		width auto
+	.menu ul li ul li:nth-child(2)
+		padding-left 0
+	.menu ul li ul li:nth-child(2) img
+		display block
+		width 100%
+		height 100px
+	.menu ul li:nth-child(1) img
+		display block
+	.menu
+		position absolute
+	.menu ul li ul li
+		display block
+		border-radius 0		
+		text-align left
+		padding 0 0 0.4rem 1rem
+	// CSS para menu emergente
+	.menu ul ul
+		display none
+	.menu li:hover > ul
+		display block
+
 /* 
 *   ===============================================================
 *		RESOLUCION PARA TABLET (MEDIANA) => Para IPAD 1024 X 768
 *   ===============================================================
 */
- @media screen and (min-width 436px)
+ @media screen and (min-width 800px)
 	section
-		display -webkit-inline-box
-		
+		display -webkit-inline-box		
 	article
-		// background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))	
-		// background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))
+		background -moz-linear-gradient(left top, left bottom,from(amarillo_claro), to(amarillo_claro))	
+		background -webkit-gradient(linear,left top, left bottom,from(amarillo_claro), to(amarillo_claro))
 		border-radius 15px
 		display block
 		text-align center
 		& p 
 			color white
-
+			margin 0
+			font-size 1rem
+			padding-left 2.5rem
 	.redes_sociales_contacto ul li
-		display -webkit-inline-box
-
-	
+		display -webkit-inline-box	
 	.desayunos_tipo--img
-		margin auto 3rem
-		padding 1rem
-		
+		margin auto 1rem
+		padding 0rem		
 	.layoutDesayunos
-		text-align center
-		
+		text-align center		
 	.menu ul li ul li:nth-child(2)
 		display none
-
+	.desayunos_tipo--img
+		padding-left 1rem
+		padding-right 1rem
+		padding-bottom 1rem
 	nav
 		background color_article_desayunos
 		background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
