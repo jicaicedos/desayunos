@@ -18,21 +18,24 @@ color_article_desayunos = #F09139
 color_fondo_verde_mantel = #03C948
 
 article a
-	background red
 	text-decoration none
 	font-weight bold
 	padding 0.4rem
 
 
 article
+	background #F8DC87
 	display -webkit-box
-	margin 1rem
-	background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
-	background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
+	margin 0.8rem
+	// background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))	
+	// background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_fondo_contactos))
 	box-shadow 10px 10px 10px gray
 	border-radius 0 15px 15px 0
+	border-top 1px solid gray
+	border-left 1px solid gray
 	& p
-		color white
+		color color_texto_contactos
+		width 100px
 	
 figure
 	margin 0
@@ -72,6 +75,7 @@ ul
 	border-radius 40%
 	width 9rem
 	height 6rem
+	padding-top 0.5rem
 
 .desayunos_tipo--img
 	margin 0
@@ -84,7 +88,6 @@ ul
 .linea_divisora
 	border 1px solid
 	
-
 .menu ul a
 	text-decoration none
 	color white
@@ -175,8 +178,8 @@ ul
 		display -webkit-inline-box
 		
 	article
-		background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))	
-		background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))
+		// background -moz-linear-gradient(left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))	
+		// background -webkit-gradient(linear,left top, left bottom,from(color_article_desayunos), to(color_article_desayunos))
 		border-radius 15px
 		display block
 		text-align center
