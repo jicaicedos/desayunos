@@ -192,6 +192,38 @@ ul
 
 /*
 *   ===============================================================
+*			RESOLUCION PARA SAMSUNG GALAXY 3 (Portrait...)
+*			360 x 640 ==> Resolución Retina Design 720 x 1280
+*   ===============================================================
+*/
+@media screen and (min-width 360px)
+	h1
+		font-size 1.5rem
+	article p
+		width 150px
+	.menu ul li ul li:nth-child(2)
+		padding-left 0
+	.menu ul li ul li:nth-child(2) img
+		display block
+		width 100%
+		height 100px
+	.menu ul li:nth-child(1) img
+		display block
+	.menu
+		position absolute
+	.menu ul li ul li
+		display block
+		border-radius 0		
+		text-align left
+		padding 0 0 0.4rem 1rem
+	// CSS para menu emergente
+	.menu ul ul
+		display none
+	.menu li:hover > ul
+		display block	
+
+/*
+*   ===============================================================
 *			RESOLUCION PARA CELULARES (PEQUEÑA) 
 *		480 × 320 Phone (landscape) => Horizontal
 *   ===============================================================
@@ -339,37 +371,7 @@ ul
 		display flex
 
 
-/*
-*   ===============================================================
-*			RESOLUCION PARA SAMSUNG GALAXY 3 (Portrait...)
-*			360 x 640 ==> Resolución Retina Design 720 x 1280
-*   ===============================================================
-*/
-@media screen and (min-width 360px)
-	h1
-		font-size 1.5rem
-	article p
-		width 150px
-	.menu ul li ul li:nth-child(2)
-		padding-left 0
-	.menu ul li ul li:nth-child(2) img
-		display block
-		width 100%
-		height 100px
-	.menu ul li:nth-child(1) img
-		display block
-	.menu
-		position absolute
-	.menu ul li ul li
-		display block
-		border-radius 0		
-		text-align left
-		padding 0 0 0.4rem 1rem
-	// CSS para menu emergente
-	.menu ul ul
-		display none
-	.menu li:hover > ul
-		display block		
+	
 /*
 *   ===============================================================
 *			RESOLUCION PARA SAMSUNG GALAXY 3  (landscape...)
