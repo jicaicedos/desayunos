@@ -253,6 +253,27 @@ ul
 	.menu li:hover > ul
 		display block
 
+/*
+*   ===============================================================
+*			RESOLUCION PARA SAMSUNG GALAXY 3  (landscape...)
+*			640 x 360 ==> Resolución Retina Design 720 x 1280
+*   ===============================================================
+*/
+@media screen and (min-width 640px)
+	section
+		display -webkit-inline-box		
+	article
+		background red
+		border-radius 15px
+		display block
+		text-align center
+		border-top 1px solid gray
+		border-left 1px solid gray
+		& p 
+			color color_texto_contactos
+			margin 0
+			font-size 1rem
+			padding-left 0
 
 /* 
 *   ===============================================================
@@ -370,25 +391,3 @@ ul
 	.layout_footer
 		display flex
 
-
-	
-/*
-*   ===============================================================
-*			RESOLUCION PARA SAMSUNG GALAXY 3  (landscape...)
-*			360 x 640 ==> Resolución Retina Design 720 x 1280
-*   ===============================================================
-*/
-// @media screen and (max-width 641px)
-// 	section
-// 		display -webkit-inline-box		
-// 	article
-// 		border-radius 15px
-// 		display block
-// 		text-align center
-// 		border-top 1px solid gray
-// 		border-left 1px solid gray
-// 		& p 
-// 			color color_texto_contactos
-// 			margin 0
-// 			font-size 1rem
-// 			padding-left 0
