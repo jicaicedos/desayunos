@@ -1,186 +1,278 @@
-// Colores
-amarillo_claro = #F9BE01
-amarillo_medio = #F5D408
-azul_claro_marino = #66D9EF
-azul_claro = #ADCBE9
-azul_medio = #008DA0
-azul_oscuro = #133B93
+// // Colores
+// amarillo_claro = #F9BE01
+// amarillo_medio = #F5D408
+// azul_claro_marino = #66D9EF
+// azul_claro = #ADCBE9
+// azul_medio = #008DA0
+// azul_oscuro = #133B93
 
-morado_claro = #9395CA
-morado_oscuro = #AF70AF
-fuscia = #C61C80
+// morado_claro = #9395CA
+// morado_oscuro = #AF70AF
+// fuscia = #C61C80
 
-naranjado_oscuro = #EC6D33
-naranjado_medio = #F57D43
+// naranjado_oscuro = #EC6D33
+// naranjado_medio = #F57D43
 
-fondo_header2 = #ECC11A
+// fondo_header2 = #ECC11A
 
-color_fondo_cajas_texto_precio = azul_medio
+// color_fondo_cajas_texto_precio = azul_medio
 
 color_textos_p = #453205
 
-
-span
-	font-weight bold
-	&::before
-		content "$  "
-.de_layoutDesayunos section 
-	display block
-.de_desayuno_eco
-	background color_fondo_cajas_texto_precio
-	display block
-	border-top 0.1rem solid color_textos_p
-	border-left 0.1rem solid color_textos_p
-.de_info_desayuno
-	background #FFFCF2
-	border-radius 15px
-	display -webkit-box
-.de_contenido
-	width 30%
-	text-align justify
+*
+	margin 0
+	padding 0
+	font-family Arial, sans-serif
+	
+.de_contenido, .de_adicionar, .de_precio_desayuno
 	& p
-		color color_textos_p
-		font-weight bold
-.de_adicionar
-	width 30%
-	text-align -webkit-left
-	padding-left 3rem
-	& p
-		width 8rem
-		padding 0
-		margin 0
-		display -webkit-inline-box
-		color black
-
-.de_ver_desayuno
-	width 30%
-	& p
-		color color_textos_p
-.de_precio_desayuno
-	display -webkit-box	
-	& p
-		padding-left 1rem
-		padding-right 1rem		
-.de_botones_orden input
-		margin 0.5rem
-		padding 0.5rem
-		border-radius 25px
-		font-weight bold
-article 
-	.de_botones_orden
-		background color_fondo_cajas_texto_precio
-		border-radius 0 0 15px 15px
-	& .de_desayunos_tipo_img
-		width 196px
-		height auto
-		border-radius 20%
-		border 5px solid #B87D03
-		box-shadow 5px 5px 10px fondo_header2
-
-/*
-*   ===============================================================
-*			RESOLUCION PARA CELULARES (PEQUEÑA) 
-*		320 × 480 Phone (portrait) => Vertical
-*   ===============================================================
-*/
-@media screen and (max-width 320px)
-	html
 		font-size 12px
-	h2
-		font-weight normal
-	.de_desayuno_eco
-		border-radius 15px
-	.de_ver_desayuno
-		width auto
-		& p
-			width auto
-			padding .4rem
-			margin 0
-	.de_desayuno_eco
-		text-align center
-	.de_info_desayuno
-		display block
-	.de_contenido
-		width auto
-		text-align justify		
-		padding 0 1rem		
-		& p
-			width auto
-			font-weight normal
-	.de_precio_desayuno
-		display block
-		& div
-			display -webkit-box
-			& p
-				width 6rem
-				font-size 14px
-				text-align left
-				margin 0
-				padding-left 1rem
-				padding-top 0.8rem
-			& input
-				margin-top 0.8rem				
-				width 8rem
-	.btn_check
-		width 50px
-	.de_pedidos
-		width 200px
-	.de_adicionar
-		margin 0px
-		padding-bottom 1rem
-		padding-left 1rem
-	.panel_menu
-		height 32px
-	// .menu ul li:nth-child(1) img
-	// 	width 60%		
-	// .menu ul li img
-	// 	display none
-	// .menu li:hover > ul
-	// 	display block	
+	& span
+		font-size 12px
 
-/* 
-*   ===============================================================
-*		RESOLUCION PARA TABLET (MEDIANA) => Para IPAD 1024 X 768
-*   ===============================================================
-*/
-@media screen and (min-width 436px)
-	.de_precio_desayuno
-		display block
-		text-align left
-		& div
-			display -webkit-inline-box
-			& p
-				width 7rem
-				text-align left
-				margin 0
-				padding-left 1rem
-				padding-top 0.8rem
-			& input
-				margin-top 0.8rem				
-				width 8rem
+header //, .de_adicionar, .de_precio_desayuno, .de_botones_orden
+	display none
 
-/* 
-*   =======================================
-*		RESOLUCION PARA PC (GRANDE)
-*   =======================================
-*/
-@media screen and (min-width 1000px)
-	.de_adicionar p 
-		padding-top 0.3rem
-		padding-bottom 0.3rem
-		padding-left 1rem
-	.de_precio_desayuno
-		background color_fondo_cajas_texto_precio
-		display block
-		& div
-			display -webkit-inline-box
-			& p
-				width 8rem
-				text-align left
-				margin 0
-				padding-left 1rem
-				padding-top 0.8rem
-			& input
-				margin-top 0.8rem				
-				width 12rem
+figure
+	text-align center
+
+article	
+	background #FAD25A
+
+form label
+	display -webkit-box
+	& p
+		margin-left 1em
+		margin-bottom .3em
+		width 8em		
+	& span::before
+		content "$ "
+
+.de_desayunos_tipo_img
+	width 14em
+
+.de_ver_desayuno	
+	margin-bottom .5em
+	text-align center
+	& span		
+		font-size 24px
+		font-family 'Indie Flower', cursive
+	& h2
+		font-weight bold
+		font-family 'Indie Flower', cursive
+	& h3::before
+		font-family 'Indie Flower', cursive
+		content "$  "
+
+.de_contenido
+	background yellow
+	margin-bottom .5em
+	text-align justify	
+	padding .5em
+	& h2
+		font-family 'Indie Flower', cursive
+
+
+
+.de_adicionar
+	background red
+	margin-bottom .5em
+	padding .5em
+	& h2
+		margin-bottom .5em
+		font-family 'Indie Flower', cursive
+		
+
+.de_precio_desayuno
+	background gray
+	padding .5em
+	display -webkit-box
+	& p
+		margin .2em 0
+	& input
+		margin .2em 0
+		width 11em
+	& #btn_calcular
+		margin-top .5em
+	& #cantidad
+		width 4em
+	& #btn_calcular
+		width 6em
+		
+	
+.de_botones_orden
+	background gray
+
+// .de_precio_desayuno
+// 	display -webkit-box	
+// 	& p
+// 		padding-left 1rem
+// 		padding-right 1rem		
+// .de_botones_orden input
+// 		margin 0.5rem
+// 		padding 0.5rem
+// 		border-radius 25px
+// 		font-weight bold
+
+
+
+
+
+// span
+// 	font-weight bold
+// 	&::before
+// 		content "$  "
+// .de_layoutDesayunos section 
+// 	display block
+// .de_desayuno_eco
+// 	background color_fondo_cajas_texto_precio
+// 	display block
+// 	border-top 0.1rem solid color_textos_p
+// 	border-left 0.1rem solid color_textos_p
+// .de_info_desayuno
+// 	background #FFFCF2
+// 	border-radius 15px
+// 	display -webkit-box
+// .de_adicionar
+// 	width 30%
+// 	text-align -webkit-left
+// 	padding-left 3rem
+// 	& p
+// 		width 8rem
+// 		padding 0
+// 		margin 0
+// 		display -webkit-inline-box
+// 		color black
+
+// .de_ver_desayuno
+// 	width 30%
+// 	& p
+// 		color color_textos_p
+// .de_precio_desayuno
+// 	display -webkit-box	
+// 	& p
+// 		padding-left 1rem
+// 		padding-right 1rem		
+// .de_botones_orden input
+// 		margin 0.5rem
+// 		padding 0.5rem
+// 		border-radius 25px
+// 		font-weight bold
+// article 
+// 	.de_botones_orden
+// 		background color_fondo_cajas_texto_precio
+// 		border-radius 0 0 15px 15px
+// 	& .de_desayunos_tipo_img
+// 		width 196px
+// 		height auto
+// 		border-radius 20%
+// 		border 5px solid #B87D03
+// 		box-shadow 5px 5px 10px fondo_header2
+
+// /*
+// *   ===============================================================
+// *			RESOLUCION PARA CELULARES (PEQUEÑA) 
+// *		320 × 480 Phone (portrait) => Vertical
+// *   ===============================================================
+// */
+// @media screen and (max-width 320px)
+// 	html
+// 		font-size 12px
+// 	h2
+// 		font-weight normal
+// 	.de_desayuno_eco
+// 		border-radius 15px
+// 	.de_ver_desayuno
+// 		width auto
+// 		& p
+// 			width auto
+// 			padding .4rem
+// 			margin 0
+// 	.de_desayuno_eco
+// 		text-align center
+// 	.de_info_desayuno
+// 		display block
+// 	.de_contenido
+// 		width auto
+// 		text-align justify		
+// 		padding 0 1rem		
+// 		& p
+// 			width auto
+// 			font-weight normal
+// 	.de_precio_desayuno
+// 		display block
+// 		& div
+// 			display -webkit-box
+// 			& p
+// 				width 6rem
+// 				font-size 14px
+// 				text-align left
+// 				margin 0
+// 				padding-left 1rem
+// 				padding-top 0.8rem
+// 			& input
+// 				margin-top 0.8rem				
+// 				width 8rem
+// 	.btn_check
+// 		width 50px
+// 	.de_pedidos
+// 		width 200px
+// 	.de_adicionar
+// 		margin 0px
+// 		padding-bottom 1rem
+// 		padding-left 1rem
+// 	.panel_menu
+// 		height 32px
+// 	// .menu ul li:nth-child(1) img
+// 	// 	width 60%		
+// 	// .menu ul li img
+// 	// 	display none
+// 	// .menu li:hover > ul
+// 	// 	display block	
+
+// /* 
+// *   ===============================================================
+// *		RESOLUCION PARA TABLET (MEDIANA) => Para IPAD 1024 X 768
+// *   ===============================================================
+// */
+// @media screen and (min-width 436px)
+// 	.de_precio_desayuno
+// 		display block
+// 		text-align left
+// 		& div
+// 			display -webkit-inline-box
+// 			& p
+// 				width 7rem
+// 				text-align left
+// 				margin 0
+// 				padding-left 1rem
+// 				padding-top 0.8rem
+// 			& input
+// 				margin-top 0.8rem				
+// 				width 8rem
+
+// /* 
+// *   =======================================
+// *		RESOLUCION PARA PC (GRANDE)
+// *   =======================================
+// */
+// @media screen and (min-width 1000px)
+// 	.de_adicionar p 
+// 		padding-top 0.3rem
+// 		padding-bottom 0.3rem
+// 		padding-left 1rem
+// 	.de_precio_desayuno
+// 		background color_fondo_cajas_texto_precio
+// 		display block
+// 		& div
+// 			display -webkit-inline-box
+// 			& p
+// 				width 8rem
+// 				text-align left
+// 				margin 0
+// 				padding-left 1rem
+// 				padding-top 0.8rem
+// 			& input
+// 				margin-top 0.8rem				
+// 				width 12rem
 			

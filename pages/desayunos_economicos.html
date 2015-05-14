@@ -16,8 +16,9 @@
 
 <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" href="../stylesheets/normalize.css">
+  <!-- <link rel="stylesheet" href="../stylesheets/normalize.css"> -->
   <link rel="stylesheet" href="../stylesheets/estilos.css">
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <!-- <link rel="stylesheet" href="../stylesheets/estilos_deconomico.css"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -64,11 +65,11 @@
       <article class="de_desayuno_eco">
       	<div class="de_info_desayuno">
       		<div class="de_ver_desayuno">
-    	      <p>Desayuno económico #1</p>
+    	      <h2>Desayuno económico #1</h2>
     	      <figure class="de_desayunos_tipo--img">
     	        <img class="de_desayunos_tipo_img" src="../images/economicos/Desayuno economico (1).jpg" alt="Desayuno economico" />
     	      </figure>
-            <p><span id="precio_individual">20000</span></p>   
+            <h3><span id="precio_individual">20000</span></h3>   
       		</div>
       		<div class="de_contenido">
             <h2>Contenido</h2>
@@ -77,23 +78,21 @@
   	      <div class="de_adicionar">
   	      	<h2>Adicionar</h2>
             <form class="de_pedidos" action="de_pedido">           
-              <label><input type="checkbox" value="Globos" /></label><p>Globos</p><span id="prc_globos">5000</span><br>
-              <label><input type="checkbox" value="Flores" /></label><p>Flores</p><span id="prc_flores">10000</span><br>
-              <label><input type="checkbox" value="Chocolates" /></label><p>Chocolates</p><span id="prc_chocolates">8000</span><br>
-              <label><input type="checkbox" value="Vino nacional" /></label><p>Vino nacional</p><span id="prc_vino_nal">20000</span><br>
-              <label><input type="checkbox" value="Vino importado" /></label><p>Vino importado</p><span id="prc_vino_imp">40000</span><br>
+              <label><input type="checkbox" value="Globos" /><p>Globos</p><span id="prc_globos">5000</span></label>
+              <label><input type="checkbox" value="Flores" /><p>Flores</p><span id="prc_flores">10000</span></label>
+              <label><input type="checkbox" value="Chocolates" /><p>Chocolates</p><span id="prc_chocolates">8000</span></label>
+              <label><input type="checkbox" value="Vino nacional" /><p>Vino nacional</p><span id="prc_vino_nal">20000</span></label>
+              <label><input type="checkbox" value="Vino importado" /><p>Vino importado</p><span id="prc_vino_imp">40000</span></label>
             </form>
   	      </div>
         </div>
         <div class="de_precio_desayuno">
-        	<div><p>Valor individual </p><input id="vlr_individual" disabled="false" type="text" placeholder="Valor individual" /></div>
-       		<div><p>Cantidad </p><label><input id="cantidad" type="number" min="1" max="10" placeholder="Cantidad a ordenar" value="1"/></label></div>
-       		<div><p>Total a pagar </p><label><input id="total" disabled="false" type="text" placeholder="Total a pagar" /></label></div>
-        </div>
-        <div class="de_botones_orden">
-        	<!-- <input id="btn_limpiar" type="submit" value="Limpiar" /> -->
-        	<input id="btn_calcular" type="submit" value="Calcular" />
-        	<!-- <input id="btn_terminar" type="submit" value="Terminar" /> -->
+          <form action="">
+            <label><p>Valor individual</p><input id="vlr_individual" disabled="false" type="text" placeholder="Valor individual" /></label>
+         		<label><p>Cantidad</p><input id="cantidad" type="number" min="1" max="100" placeholder="Cantidad a ordenar" value="1"/></label>
+         		<label><p>Total a pagar</p><input id="total" disabled="false" type="text" placeholder="Total a pagar" /></label>            
+            <input id="btn_calcular" type="submit" value="Calcular" />
+          </form>
         </div>
       </article>
     </section>
