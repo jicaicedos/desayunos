@@ -1,21 +1,21 @@
-// // Colores
-// amarillo_claro = #F9BE01
-// amarillo_medio = #F5D408
-// azul_claro_marino = #66D9EF
-// azul_claro = #ADCBE9
-// azul_medio = #008DA0
-// azul_oscuro = #133B93
+// Colores
+amarillo_claro = #F9BE01
+amarillo_medio = #F5D408
+azul_claro_marino = #66D9EF
+azul_claro = #ADCBE9
+azul_medio = #008DA0
+azul_oscuro = #133B93
 
-// morado_claro = #9395CA
-// morado_oscuro = #AF70AF
-// fuscia = #C61C80
+morado_claro = #9395CA
+morado_oscuro = #AF70AF
+fuscia = #C61C80
 
-// naranjado_oscuro = #EC6D33
-// naranjado_medio = #F57D43
+naranjado_oscuro = #EC6D33
+naranjado_medio = #F57D43
 
-// fondo_header2 = #ECC11A
+fondo_header2 = #ECC11A
 
-// color_fondo_cajas_texto_precio = azul_medio
+color_fondo_cajas_texto_precio = azul_medio
 
 color_textos_p = #453205
 
@@ -23,21 +23,41 @@ color_textos_p = #453205
 	margin 0
 	padding 0
 	font-family Arial, sans-serif
+
+
+/*	=================================================================================
+*	Estilos para pagina index.html
+*	=================================================================================
+*/
+
+.desayunos
+	background morado_claro
+	margin-bottom 1em
+	margin-top 1em
+
+/*	=================================================================================
+*	FIN - Estilos para pagina index.html
+*	=================================================================================
+*/
+
+
 	
 .de_contenido, .de_adicionar, .de_precio_desayuno
 	& p
-		font-size 12px
+		font-size 13px
 	& span
-		font-size 12px
+		font-size 13px
 
-header //, .de_adicionar, .de_precio_desayuno, .de_botones_orden
+header, footer //, .de_adicionar, .de_precio_desayuno, .de_botones_orden
 	display none
 
 figure
 	text-align center
 
 article	
-	background #FAD25A
+	margin-left .5em
+	margin-right .5em
+	// background #FAD25A
 
 form label
 	display -webkit-box
@@ -51,8 +71,10 @@ form label
 .de_desayunos_tipo_img
 	width 14em
 
-.de_ver_desayuno	
-	margin-bottom .5em
+.de_ver_desayuno
+	// background lightgray
+	border-bottom 1px solid gray	
+	// margin-bottom .5em
 	text-align center
 	& span		
 		font-size 24px
@@ -65,31 +87,30 @@ form label
 		content "$  "
 
 .de_contenido
-	background yellow
-	margin-bottom .5em
+	// background yellow
+	border-bottom 1px solid gray
+	// margin-bottom .5em
 	text-align justify	
 	padding .5em
 	& h2
 		font-family 'Indie Flower', cursive
 
-
-
 .de_adicionar
-	background red
-	margin-bottom .5em
+	// background red
 	padding .5em
 	& h2
 		margin-bottom .5em
 		font-family 'Indie Flower', cursive
 		
-
 .de_precio_desayuno
-	background gray
+	background azul_medio
 	padding .5em
 	display -webkit-box
+	margin-bottom .5em
 	& p
 		margin .2em 0
 	& input
+		border-radius 4px
 		margin .2em 0
 		width 11em
 	& #btn_calcular
@@ -101,7 +122,7 @@ form label
 		
 	
 .de_botones_orden
-	background gray
+	background azul_medio
 
 // .de_precio_desayuno
 // 	display -webkit-box	
