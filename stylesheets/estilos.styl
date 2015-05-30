@@ -28,7 +28,6 @@ color_textos_p = #453205
 *	=================================================================================
 */
 
-
 article:nth-last-child(1)
 	border-bottom none
 	padding-bottom 1em
@@ -49,7 +48,6 @@ article:nth-last-child(1)
 	// background #8F765D
 	padding-bottom 1em
 	padding-top 1em
-	// border-bottom 1px solid colo
 	& li
 		text-align center
 		vertical-align middle
@@ -64,19 +62,20 @@ article:nth-last-child(1)
 		font-weight bold
 
 .contacto
-	// background #8F765D
 	background naranjado_claro
 	padding-bottom 1em
 	padding-left 2em
 	padding-top 1em
 
-footer
-	background black
+footer	
+	background naranjado_claro
 	text-align center
 	& #derechos_reservados		
+		background black
 		padding-top .5em
 		padding-bottom .5em		
 		color white
+		text-align center
 		& a
 			list-style-type none
 			text-decoration none
@@ -116,9 +115,6 @@ header
 		font-size 13px
 	& span
 		font-size 13px
-
-//header //, footer //, .de_adicionar, .de_precio_desayuno, .de_botones_orden
-	// display none
 
 figure
 	text-align center
@@ -194,48 +190,35 @@ form label
 	background azul_medio
 
 
+// Mobile (portrait)
+// @media only screen and (max-width: 767px)
+
+// Mobile (landscape)
+@media only screen and (min-width: 480px) and (max-width: 767px)
+	section
+		display flex
+		-webkit-justify-content center
+		justify-content center
+	.layout_footer
+		-webkit-justify-content center
+		display flex
+		justify-content center
+		padding-bottom 1em
+		padding-top 1em
+		& .redes_sociales_contacto
+			padding-right 2em
+			border-right 1px solid black
+		& .contacto
+			text-align center
+	footer	
+		& p
+			text-align left		
+	.desayunos
+		border-bottom none
+// Tablet (portrait)
+// @media only screen and (min-width: 768px)
 
 
-// // Colores 
-// amarillo_claro = #F9BE01
-// amarillo_medio = #F5D408
-// azul_claro_marino = #66D9EF
-// azul_claro = #ADCBE9
-// azul_medio = #008DA0
-// azul_oscuro = #133B93
-
-// morado_claro = #9395CA
-// morado_oscuro = #AF70AF
-// fuscia = #C61C80
-
-// naranjado_oscuro = #EC6D33
-// naranjado_medio = #F57D43
-
-
-
-// fondo_header = #F5AD65
-// fondo_header2 = #ECC11A
-// color_elementos_desayunos = #F3CC83
-// elementos_desayunos = #F89714
-// fondo_moviles = #FDE8B5
-// fondo_item_menu = rgba(60, 60, 60, 0.75)
-
-// color_fondo_contactos = #F59D3D
-// color_texto_contactos = #453205
-
-// color_fondo_redes_sociales = #FDEFC6
-
-// color_article_desayunos = #FBF0C6
-
-// color_fondo_verde_mantel = #03C948
-
-// html
-// 	min-height 100%
-
-// article a
-// 	text-decoration none
-// 	font-weight bold
-// 	padding 0.4rem
 
 // article
 // 	display -webkit-box
@@ -251,56 +234,7 @@ form label
 // 		color color_texto_contactos
 // 		width 200px
 	
-// figure
-// 	margin 0
 
-// footer
-// 	text-align center
-// 	background azul_oscuro
-// 	min-height 100%
-// 	& .contacto
-// 		& p
-// 			color color_texto_contactos
-// 			padding 0
-// 	& p
-// 		color white
-// 		margin 0
-// 		padding 1rem
-// h1
-// 	margin 0
-// 	padding 0 0 0 1rem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-
-// header
-// 	background fondo_header
-// 	background -moz-linear-gradient(left top, left bottom,from(red), to(fondo_header2))	
-// 	background -webkit-gradient(linear,left top, left bottom,from(red), to(fondo_header2))
-
-	
-// ul
-// 	list-style-type none
-// 	margin 0
-// 	padding 0
-	
-// .panel_menu
-// 	display -webkit-inline-box
-		
-// .desayunos_tipo_img
-// 	border-radius 40%
-// 	width 8rem
-// 	height 6rem
-// 	padding-top 0.4rem
-
-// .desayunos_tipo--img
-// 	margin 0
-// 	padding 0
-
-// .encabezado__image__foto--img
-// 	width 100%
-// 	height 150px
-
-// .linea_divisora
-// 	border 1px solid
-	
 
 // .menu ul a
 // 	text-decoration none
@@ -329,24 +263,12 @@ form label
 // 	text-align center
 // 	display block
 
-// .redes_sociales_contacto
-// 	text-align center
-// 	background color_fondo_redes_sociales
-// 	background -moz-linear-gradient(left top, left bottom,from(white), to(color_fondo_redes_sociales))	
-// 	background -webkit-gradient(linear,left top, left bottom,from(white), to(color_fondo_redes_sociales))
 	
 // .redes_sociales_contacto ul li
 // 	margin-right 20px
 // 	font-weight bold
 // 	padding 0.8rem
 
-// .contacto
-// 	background color_fondo_contactos
-// 	background -moz-linear-gradient(left top, left bottom,from(color_fondo_redes_sociales), to(color_fondo_contactos))	
-// 	background -webkit-gradient(linear,left top, left bottom,from(color_fondo_redes_sociales), to(color_fondo_contactos))
-// 	padding 1rem
-// 	font-weight bold
-// 	text-align center
 	
 // .redes_sociales_contacto ul li a img
 // 	width 32px
