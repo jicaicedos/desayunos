@@ -10,8 +10,6 @@ morado_claro = #9395CA
 morado_oscuro = #AF70AF
 fuscia = #C61C80
 
-naranjado_oscuro = #EC6D33
-naranjado_medio = #F57D43
 naranjado_claro = #F5B249
 
 fondo_header2 = #ECC11A
@@ -47,9 +45,11 @@ article:nth-last-child(1)
 		text-align center
 
 .redes_sociales_contacto
-	background azul_claro_marino
+	background naranjado_claro
+	// background #8F765D
 	padding-bottom 1em
 	padding-top 1em
+	// border-bottom 1px solid colo
 	& li
 		text-align center
 		vertical-align middle
@@ -64,16 +64,24 @@ article:nth-last-child(1)
 		font-weight bold
 
 .contacto
-	padding-top 1em
+	// background #8F765D
+	background naranjado_claro
 	padding-bottom 1em
-	background #F3B170
+	padding-left 2em
+	padding-top 1em
 
-footer .linea_final
-	background #000
-	color #F4E6E6
-	padding-top 1em
-	padding-bottom 1em
-	
+footer
+	background black
+	text-align center
+	& #derechos_reservados		
+		padding-top .5em
+		padding-bottom .5em		
+		color white
+		& a
+			list-style-type none
+			text-decoration none
+			color #C7C72E
+			
 .encabezado__image__foto--img
 	width 100%
 	height 100px
@@ -81,11 +89,21 @@ footer .linea_final
 .menu
 	display none
 
-header h1
+header
 	background naranjado_claro
-	font-family 'Indie Flower'
-	text-align center
-	font-weight bold
+	display flex
+	-webkit-justify-content center
+	& h1
+		font-family 'Indie Flower'
+		text-align center
+		font-weight bold
+		padding-left 10px
+		font-size 24px
+		margin-top 10px
+	& img
+		border-radius 50%
+		border 1px solid black
+		margin-top 4px
 
 
 /*	=================================================================================
@@ -171,8 +189,7 @@ form label
 		width 4em
 	& #btn_calcular
 		width 6em
-		
-	
+
 .de_botones_orden
 	background azul_medio
 
