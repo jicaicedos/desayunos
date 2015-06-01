@@ -1,22 +1,7 @@
 // Colores
 amarillo_claro = #F9BE01
-amarillo_medio = #F5D408
-azul_claro_marino = #66D9EF
-azul_claro = #ADCBE9
 azul_medio = #008DA0
-azul_oscuro = #133B93
-
-morado_claro = #9395CA
-morado_oscuro = #AF70AF
-fuscia = #C61C80
-
 naranjado_claro = #F5B249
-
-fondo_header2 = #ECC11A
-
-color_fondo_cajas_texto_precio = azul_medio
-
-color_textos_p = #453205
 
 *
 	margin 0
@@ -80,30 +65,66 @@ footer
 			list-style-type none
 			text-decoration none
 			color #C7C72E
-			
-.encabezado__image__foto--img
-	width 100%
-	height 100px
+
+.menu_list
+	display none
+	
+.menu_list
+    overflow hidden
+    transition max-height .5s ease-in-out
+
+.menu_list.visible
+	max-height 100px
+
+.menu_link:hover
+	display block
 
 .menu
-	display none
+	position relative
+	& .menu_list
+		position absolute
+		& .menu_item
+			border-bottom 2px solid gray
+		& .menu_link
+			display block
+			color white
+			background #A5A3A3
+			// background orange
+			padding-left 8px
+			padding-top 8px
+			padding-bottom 5px
+			text-decoration none
+			width 200px		
+
+.menu_icon
+	display block
+	background #F9C169
+	padding-left .2em
+	padding-right .2em
+	font-size 45px
+	color #C47D0C
 
 header
 	background naranjado_claro
-	display flex
-	-webkit-justify-content center
-	& h1
-		font-family 'Indie Flower'
-		text-align center
-		font-weight bold
-		padding-left 10px
-		font-size 24px
-		margin-top 10px
-	& img
-		border-radius 50%
-		border 1px solid black
-		margin-top 4px
 
+	& img
+		display none
+	.marco_header
+		display flex
+		-webkit-justify-content space-between		
+		& h1
+			font-family 'Indie Flower'
+			text-align center
+			font-weight bold
+			padding-left 10px
+			margin-top 10px
+			font-size 24px
+		& .logo		
+			display block
+			border-radius 50%
+			border 1px solid black
+			margin-top 4px
+			height auto
 
 /*	=================================================================================
 *	FIN - Estilos para pagina index.html
@@ -139,7 +160,7 @@ form label
 
 .de_ver_desayuno
 	// background lightgray
-	border-bottom 1px solid gray	
+	border-bottom 1px solid gray
 	// margin-bottom .5em
 	text-align center
 	& span		
@@ -187,7 +208,7 @@ form label
 		width 6em
 
 .de_botones_orden
-	background azul_medio
+	background azul_claro_marino
 
 
 // Mobile (portrait)
@@ -195,6 +216,14 @@ form label
 
 // Mobile (landscape)
 @media only screen and (min-width: 480px) and (max-width: 767px)
+	// body
+	// 	background #C48B8B
+	.menu
+		display block		
+	header .img_encabezado
+		display block
+		width 100%
+		height 250px
 	section
 		display flex
 		-webkit-justify-content center
@@ -216,7 +245,33 @@ form label
 	.desayunos
 		border-bottom none
 // Tablet (portrait)
-// @media only screen and (min-width: 768px)
+@media only screen and (min-width: 768px)
+	.menu
+		display block		
+	header .img_encabezado
+		display block
+		width 100%
+		height 270px
+	section
+		display flex
+		-webkit-justify-content center
+		justify-content center
+	.layout_footer
+		-webkit-justify-content center
+		display flex
+		justify-content center
+		padding-bottom 1em
+		padding-top 1em
+		& .redes_sociales_contacto
+			padding-right 2em
+			border-right 1px solid black
+		& .contacto
+			text-align center
+	footer	
+		& p
+			text-align left		
+	.desayunos
+		border-bottom none
 
 
 
